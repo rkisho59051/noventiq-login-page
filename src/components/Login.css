@@ -1,0 +1,170 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full viewport height */
+  background-image: url(../assets/noventiq_banner.jpg); /* Replace with your banner image path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.form-box {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #000; /* Black border */
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-size: 1em;
+  color: #000; /* Primary black */
+  margin-right: 10px;
+  flex-shrink: 0; /* Prevent label from shrinking */
+}
+
+.form-icon {
+  font-size: 1.5em;
+  color: #000; /* Primary black */
+  margin-right: 10px;
+}
+
+.form-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.password-field {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: calc(100% - 40px); /* Adjusted width for the icon */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Adjusted width for the toggle */
+  height: 24px; /* Adjusted height for the toggle */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px; /* Adjusted border-radius for the toggle */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Adjusted size of the toggle button */
+  width: 16px; /* Adjusted size of the toggle button */
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px); /* Adjusted position for the toggle button */
+}
+
+.slider.round {
+  border-radius: 24px; /* Adjusted border-radius for the toggle */
+}
+
+.toggle-label {
+  font-size: 1em;
+  color: #000; /* Primary black */
+  margin-left: 10px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%; /* Match width of form box */
+  max-width: 400px; /* Match max-width of form box */
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button {
+  position: absolute;
+  bottom: 160px; /* Adjusted bottom position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure button is above the form */
+}
+
+.submit-button,
+.remember-me-label {
+  text-align: center;
+  z-index: 1; /* Ensure button is above the form */
+}
+
+/* Optional: Adjustments for footer */
+.copyright-container {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  width: 100%;
+  text-align: center;
+  color: #000; /* Primary black */
+}
+
+.display-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
