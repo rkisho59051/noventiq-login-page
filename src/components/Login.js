@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import './Login.css'; // Import the CSS file for additional styles
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faLock,
+  faEye,
+  faEyeSlash,
+} from "@fortawesome/free-solid-svg-icons";
+import "./Login.css"; // Import the CSS file for additional styles
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('en'); // Default to English
+  const [selectedLanguage, setSelectedLanguage] = useState("en"); // Default to English
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleEmailChange = (e) => {
@@ -33,7 +38,12 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform form submission logic here (e.g., validation, API call)
-    console.log('Form submitted:', { email, password, selectedLanguage, rememberMe });
+    console.log("Form submitted:", {
+      email,
+      password,
+      selectedLanguage,
+      rememberMe,
+    });
   };
 
   return (
@@ -59,7 +69,7 @@ const Login = () => {
             <FontAwesomeIcon icon={faLock} className="form-icon" />
             <div className="password-field">
               <input
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 value={password}
                 onChange={handlePasswordChange}
@@ -73,10 +83,19 @@ const Login = () => {
               />
             </div>
           </div>
+          <div>
+            <a href="/forgot-password" className="forgot-password-link">
+              Forgot Password?
+            </a>
+          </div>
 
           <div className="form-row">
             <label className="form-label">Language:</label>
-            <select value={selectedLanguage} onChange={handleLanguageChange} className="form-input">
+            <select
+              value={selectedLanguage}
+              onChange={handleLanguageChange}
+              className="form-input"
+            >
               <option value="en">English</option>
               <option value="hi">Hindi</option>
               <option value="other">Other Indian Language</option>
